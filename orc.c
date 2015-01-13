@@ -41,7 +41,7 @@ int main ( int argc, char **argv )
       // Define new char str with size of 100
       // concat it with the characters api_key=
       // concat it with the char avalue
-      char str[200] = "";
+      char str[42] = "";
       strcat(str, "api_key=");
       strcat(str, avalue);
      
