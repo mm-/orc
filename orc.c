@@ -9,6 +9,7 @@
 int main ( int argc, char **argv )
 {
   char *avalue = NULL;
+  char *apicall = NULL;
   int index;
   // int a;
   int c;
@@ -19,7 +20,12 @@ int main ( int argc, char **argv )
     switch (c)
       {
       case 'a':
+	// Set the value of -a to optarg
 	avalue = optarg;
+	// Print arg right after api key for debugging
+	printf ("other option: %s\n", argv[3]);
+	// Set value of arg after api key to apicall
+	apicall = argv[3];
 	break;
       case '?':
 	if (optopt == 'c')
@@ -30,7 +36,7 @@ int main ( int argc, char **argv )
       default:
 	abort ();
       }
-  // print api_key for debugging
+  // Print api_key for debugging
   //printf ("API_KEY = %s\n", avalue);
 
   if (*avalue != 0)
